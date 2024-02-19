@@ -12,7 +12,7 @@ I            steps{
 
         stage('Build docker image') {
             steps {  
-                sh 'docker build -t iccpinfotech/nodeapp1:$BUILD_NUMBER .'
+                sh 'docker build -t iccpinfotech/iccpweb:$BUILD_NUMBER .'
             }
         }
         stage('login to dockerhub') {
@@ -22,7 +22,7 @@ I            steps{
         }
         stage('push image') {
             steps{
-                sh 'docker push iccpinfotech/nodeapp1:$BUILD_NUMBER'
+                sh 'docker push iccpinfotech/iccpweb:$BUILD_NUMBER'
             }
         }
 }
